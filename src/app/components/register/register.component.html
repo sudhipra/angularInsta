@@ -1,0 +1,78 @@
+<div class="container mt-5 ">
+    <form (ngSubmit)="isValid() && registerForm.valid && register()" #registerForm = "ngForm">
+      <div class="row justify-content-center">
+        <div class="col-3 mb-5">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNCLZHKTLEOKZDwh3sr39VHnlLzrHquaLv3nSA2OUdWdLl1cljz8P6E2k16ov-yr0a-lA&usqp=CAU"
+            alt=""
+            width="300"
+            height="180"
+          />
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-6 mb-3">
+          <label class="form-label">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            name="username"
+            required
+            minlength="3"
+            [(ngModel)]="userForm.username"
+            #username="ngModel"
+          />
+          <small class="text-danger" *ngIf="!username.valid"
+            >Password is required</small
+          >
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-6 mb-3">
+          <label class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            required
+            minlength="3"
+            [(ngModel)]="userForm.password"
+            #password="ngModel"
+          />
+          <small class="text-danger" *ngIf="!password.valid"
+            >Password is required</small
+          >
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-6 mb-3">
+          <label class="form-label">Image Url</label>
+          <input
+            type="text"
+            class="form-control"
+            name="image"
+            required
+            minlength="3"
+            [(ngModel)]="userForm.img"
+            #image="ngModel"
+          />
+          <small class="text-danger" *ngIf="!image.valid"
+            >Image is required</small
+          >
+        </div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-6 mb-3">
+          <a routerLink="/login" class="text-decoration-none text-dark"
+            >Already registered?</a
+          >
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-6 mb-3">
+          <button type="submit" class="btn btn-primary">Sign-up</button>
+        </div>
+      </div>
+    </form>
+  </div>

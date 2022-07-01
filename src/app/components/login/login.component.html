@@ -1,0 +1,62 @@
+<div class="container mt-5">
+  <form (ngSubmit)="login()">
+    <div class="row justify-content-center">
+      <div class="col-3 mb-5">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNCLZHKTLEOKZDwh3sr39VHnlLzrHquaLv3nSA2OUdWdLl1cljz8P6E2k16ov-yr0a-lA&usqp=CAU"
+          alt=""
+          width="300"
+          height="180"
+        />
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-6 mb-3">
+        <label class="form-label">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          name="username"
+          required
+          minlength="3"
+          [(ngModel)]="user.username"
+          #username="ngModel"
+        />
+        <small class="text-danger" *ngIf="!username.valid"
+          >Username is required</small
+        >
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-6 mb-3">
+        <label class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          required
+          minlength="3"
+          [(ngModel)]="user.password"
+          #password="ngModel"
+        />
+        <small class="text-danger" *ngIf="!password.valid"
+          >Password is required</small
+        >
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-6 mb-3">
+        <a routerLink="/register" class="text-decoration-none text-dark"
+          >Don't have an account?</a
+        >
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-6 mb-3">
+        <button type="submit" class="btn btn-primary" background-color="pink">
+          Login
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<div class="container my-4">
+  <form (ngSubmit)="!postForm.invalid && addPost()" #postForm="ngForm">
+    <div class="alert alert-danger" role="alert" *ngIf="!image.valid">
+      Image URL is required.
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="!description.valid">
+      Description is required.
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="!location.valid">
+      Location is required.
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Image URL</label>
+      <input
+        type="text"
+        class="form-control"
+        name="imageurl"
+        #image="ngModel"
+        [(ngModel)]="post.img"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <input
+        type="text"
+        class="form-control"
+        name="description"
+        #description="ngModel"
+        [(ngModel)]="post.description"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Location</label>
+      <input
+        type="text"
+        class="form-control"
+        name="location"
+        #location="ngModel"
+        [(ngModel)]="post.location"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!postForm.valid">
+      Add Post
+    </button>
+  </form>
+</div>

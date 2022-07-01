@@ -1,0 +1,33 @@
+.navbar{
+    background-color: #D3D3D3;
+}
+.navbar-brand{
+    background-color: #D3D3D3;
+}
+h1{
+    font-family: 'Smooch', cursive;
+    font-weight:200px;
+    margin-top: 20px;
+    margin-bottom:20px;
+    font-size:65px;
+    padding-left: 30px;
+}
+.list-inline-item{
+    padding: 20px;   
+}
+
+i{
+    color:black
+}
+.fa-house:hover{
+    transform: rotate(45deg);
+}
+.fa-square-plus:hover{
+    transform: rotate(45deg);
+}
+.fa-user:hover{
+    transform: rotate(45deg);
+}
+.fa-arrow-right-from-bracket:hover{
+    transform: rotate(45deg);
+}
